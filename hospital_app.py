@@ -140,6 +140,7 @@ if predict_button:
     "age" : age,
     "gender" : gender_map[gender],
     "fever" : int(fever),
+    "cough" : int(cought),
     "chest_pain" : int(chest_pain),
     "stomach_pain" : int(stomach_pain),
     "shortness_breath" : int(shortness_breath),
@@ -188,7 +189,7 @@ if predict_button:
     st.write(info["desc"])
     st.write("### What should the patient do?")
     for step in info ["next"]:
-      st.write("✅ {step}")
+      st.write(f"✅ {step}")
    else :
      st.sucess(f"Recommended Department : {department}")
      st.write(f"Confidence: {confidence:.1f}%")
