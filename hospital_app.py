@@ -190,10 +190,10 @@ if predict_button:
     st.write("### What should the patient do?")
     for step in info ["next"]:
       st.write(f"✅ {step}")
-   else :
-     st.sucess(f"Recommended Department : {department}")
-     st.write(f"Confidence: {confidence:.1f}%")
-   st.warning("This AI Recommendation is for learning purposes only")
+  else :
+    st.sucess(f"Recommended Department : {department}")
+    st.write(f"Confidence: {confidence:.1f}%")
+  st.warning("This AI Recommendation is for learning purposes only")
     
   
 
