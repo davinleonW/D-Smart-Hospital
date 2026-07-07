@@ -138,7 +138,7 @@ predict_button = st.button("Predict Department")
 if predict_button:
   patient = pd.DataFrame([{
     "age" : age,
-    "gender" : gender_map[gender},
+    "gender" : gender_map[gender],
     "fever" : int(fever),
     "chest_pain" : int(chest_pain),
     "stomach_pain" : int(stomach_pain),
