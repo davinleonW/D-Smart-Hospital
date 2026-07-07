@@ -99,7 +99,7 @@ with col1:
   stomach_pain = st.checkbox("Stomach pain🤢")
 
 with col2 :
-  shortness breath = st.checkbox("Shortnessbreath😮")
+  shortness_breath = st.checkbox("Shortnessbreath😮")
   nausea = st.checkbox("Nausea🤮")
   dizzy = st.checkbox("Dizzy😵‍💫")
   skin_rash = st.checkbox("Skin rash💥")
