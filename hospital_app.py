@@ -136,29 +136,33 @@ asthma= st.checkbox("Asthma")
 predict_button = st.button("Predict Department")
 
 if predict_button:
-  patient = pd.DataFrame([{
-    "age" : age,
-    "gender" : gender_map[gender],
-    "fever" : int(fever),
-    "cough" : int(cought),
-    "chest_pain" : int(chest_pain),
-    "stomach_pain" : int(stomach_pain),
-    "shortness_breath" : int(shortness_breath),
-    "dizziness" : int(dizziness),
-    "skin_rash" : int(skin_rash),
 
+    # Create patient data
+    patient = pd.DataFrame([{
+        "age": age,
+        "gender": gender_map[gender],
 
-    "temperature_level" : temp_map[temperature_level],
-    "heart_rate_level" : hr_map[heart_rate_level],
-    "duration" : dur_map[duration],
-    
-    "asthma" : int(asthma),
-    "hypertension" : int(hypertension),
-    "heart_disease" : int(heart_disease),
+        "fever": int(fever),
+        "cough": int(cough),
+        "headache": int(headache),
+        "chest_pain": int(chest_pain),
+        "stomach_pain": int(stomach_pain),
+        "shortness_breath": int(shortness_breath),
+        "nausea_vomiting": int(nausea_vomiting),
+        "dizziness": int(dizziness),
+        "skin_rash": int(skin_rash),
 
-    
-    "chief_complaint": cc_map[chief_complaint]
-  }])
+        "temperature_level": temp_map[temperature_level],
+        "heart_rate_level": hr_map[heart_rate_level],
+        "duration": dur_map[duration],
+
+        "asthma": int(asthma),
+        "hypertension": int(hypertension),
+        "heart_disease": int(heart_disease),
+
+        "chief_complaint": cc_map[chief_complaint]
+    }])
+
   
   patient_scaled = patient.copy()
   patient_scaled[cols_to_scale] = scaler.transform(
